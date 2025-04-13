@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('background.jpg'); /* Add your background image file */
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+.rainbow {
+  font-size: 2.5rem;
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowEffect 5s infinite;
+}
+
+@keyframes rainbowEffect {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.descriptions {
+  column-count: 3;
+  column-gap: 20px;
+  line-height: 30pt;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+.svg-container {
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.ball {
+  width: 80px;
+  height: 80px;
+  transform-origin: center;
+  animation: ballMove 2s infinite;
+}
+
+.dog {
+  transform-origin: center;
+  animation: dogMove 2s infinite;
+}
+
+@keyframes ballMove {
+  0% { transform: translateX(0) rotate(0); }
+  25% { transform: translateX(-50px) rotate(-45deg); }
+  50% { transform: translateX(-100px) rotate(-90deg); }
+  75% { transform: translateX(-50px) rotate(-135deg); }
+  100% { transform: translateX(0) rotate(-180deg); }
+}
+
+@keyframes dogMove {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(40px); }
+  50% { transform: translateX(80px); }
+  75% { transform: translateX(40px); }
+  100% { transform: translateX(0); }
+}
+
+.dog-image {
+  width: 150px;
+  height: auto;
+}
+
+.dog-text {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #333;
+}
